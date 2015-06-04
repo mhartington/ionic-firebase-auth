@@ -1,0 +1,41 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <button class="button button-calm icon ion-social-twitter button-round" ng-click="login('twitter')"></button>
+    <button class="button button-positive icon ion-social-facebook button-round" ng-click="login('facebook')"></button>
+    <button class="button button-royal icon ion-social-github button-round" ng-click="login('github')"></button>
+
+    <div ng-if="authData.facebook" class="list card">
+      <div class="item item-avatar">
+        <div class="item-image facebook-avatar" back-img="{{authData.facebook.cachedUserProfile.picture.data.url}}"></div>
+        <h2>{{authData.facebook.displayName}}</h2>
+        <p>Facebook</p>
+      </div>
+
+    </div>
+
+    <div ng-if="authData.twitter" class="list card">
+      <div class="item item-avatar">
+        <img ng-src="{{authData.twitter.cachedUserProfile.profile_image_url_https}}" alt="">
+        <h2>{{authData.twitter.displayName}}</h2>
+        <p>{{authData.twitter.username}}</p>
+        <p>Twitter</p>
+      </div>
+      <div class="item item-body">
+        <p>{{authData.twitter.cachedUserProfile.description}}</p>
+      </div>
+    </div>
+
+
+
+    <div ng-if="authData.github" class="list card">
+      <div class="item item-avatar">
+        <img ng-src="{{authData.github.cachedUserProfile.avatar_url}}" alt="">
+        <h2>{{authData.github.displayName}}</h2>
+        <p>{{authData.github.username}}</p>
+        <p>Github</p>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

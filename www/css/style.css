@@ -1,0 +1,10 @@
+/* Empty. Add your own CSS if you like */
+.facebook-avatar {
+  /* background-position: center center !important;
+  background-size: cover !important; */
+}
+.button-round {
+  border-radius: 50%;
+  height: 52px;
+  width: 52px;
+}
