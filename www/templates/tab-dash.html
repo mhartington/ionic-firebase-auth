@@ -1,9 +1,5 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
-    <button class="button button-calm icon ion-social-twitter button-round" ng-click="login('twitter')"></button>
-    <button class="button button-positive icon ion-social-facebook button-round" ng-click="login('facebook')"></button>
-    <button class="button button-royal icon ion-social-github button-round" ng-click="login('github')"></button>
-
     <div ng-if="authData.facebook" class="list card">
       <div class="item item-avatar">
         <div class="item-image facebook-avatar" back-img="{{authData.facebook.cachedUserProfile.picture.data.url}}"></div>
@@ -37,5 +33,11 @@
     </div>
 
 
+<div style="text-align:center">
+    <button class="button button-calm icon ion-social-twitter button-round" ng-click="login('twitter')"></button>
+    <button class="button button-positive icon ion-social-facebook button-round" ng-click="login('facebook')"></button>
+    <button class="button button-royal icon ion-social-github button-round" ng-click="login('github')"></button>
+
+</div>
   </ion-content>
 </ion-view>

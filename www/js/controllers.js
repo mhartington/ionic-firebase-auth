@@ -7,12 +7,9 @@ angular.module('starter.controllers', [])
     }).catch(function(error) {
       if (error.code === 'TRANSPORT_UNAVAILABLE') {
         Auth.$authWithOAuthPopup(authMethod).then(function(authData) {
-          // User successfully logged in. We can log to the console
-          // since we’re using a popup here
-          console.log(authData);
+          console.dir(authData);
         });
       } else {
-        // Another error occurred
         console.log(error);
       }
     });
