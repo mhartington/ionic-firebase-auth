@@ -7,7 +7,7 @@ angular.module('starter.controllers', [])
     }).catch(function(error) {
       if (error.code === 'TRANSPORT_UNAVAILABLE') {
         Auth.$authWithOAuthPopup(authMethod).then(function(authData) {
-          console.dir(authData);
+          console.dir(authData.uid);
         });
       } else {
         console.log(error);
@@ -19,7 +19,7 @@ angular.module('starter.controllers', [])
     if (authData === null) {
       console.log('Not logged in yet');
     } else {
-      console.log('Logged in as', authData.uid);
+      console.log('Logged in: ' + authData.uid);
     }
     $scope.authData = authData; // This will display the user's name in our view
   });
