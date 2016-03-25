@@ -1,7 +1,7 @@
 angular.module('starter.services', []
 )
   .factory('Auth', function($firebaseAuth) {
-    var usersRef = new Firebase('https://ionic-hack-reactor.firebaseio.com/users');
+    var usersRef = new Firebase('https://ionic-hack-reactor.firebaseio.com/');
     return $firebaseAuth(usersRef);
   })
 
